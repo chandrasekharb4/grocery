@@ -1,0 +1,38 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.metric-box {
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 2px 1px 2px #ccc;
+}
+
+.metric-box p{
+	font-size: 20px;
+}
+.metric-box h3{
+	font-size: 22px;
+}
+.admin-page .cats .img{
+	width:15%;
+}
+.admin-page .cats .img img{
+	width:100%;
+}
+.cats th{
+	background:#12f;
+	color:#fff;
+	text-transform:uppercase;
+	padding:10px!important;
+}
+.cats td {
+    color: #888;
+    padding: 7px 15px!important;
+    font-size: 19px!important;
+    width: 128px;
+}

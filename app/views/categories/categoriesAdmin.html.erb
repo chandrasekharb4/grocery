@@ -1,0 +1,27 @@
+<%= render :template => 'layouts/admin-header' %>
+<%= render :template => 'layouts/admin-sidebar' %>
+<div class="admin-page col-md-10">
+	<table class="table table-bordered table-hover cats">
+		<thead>
+			<tr>
+				<th>S.No</th><th>Name</th><th>image</th><th>Created at</th><th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+				<% @cats.each do |cat| %>
+					<tr>
+						<td><%= cat.id %></td>
+						<td><%= cat.name %></td>
+						<td class="img"><%= image_tag(cat.image_url) %></td>
+						<td><%= cat.created_at.strftime("%b %d %Y") %></td>
+						<td>
+							<i class="glyphicon glyphicon-pencil"></i>
+							<i class="glyphicon glyphicon-remove"></i>
+						</td>
+					</tr>
+					
+				<% end %>
+		</tbody>
+	</table>
+	
+</div>

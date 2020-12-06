@@ -1,0 +1,50 @@
+<%= render :template => 'layouts/header' %>
+<!-- Product details start -->
+	<div class="container-fluid product-details">
+		<div class="col-md-4">
+			<div class="image">
+				<%= image_tag(@product.image_url, :alt => @product.name) %>
+			</div>
+		</div>
+		<div class="col-md-8 details">
+			<h3><%= @product.name%></h3>
+			<h4><%= number_to_currency(@product.price, :unit => "₹")  %></h4>
+			<h5>About</h5>
+			<p><%= @product.description%></p>
+			<h5>Nutritional Facts</h5>
+			<p>Apart from containing useful minerals such as potassium, iron, copper and magnesium, potatoes are also full of phytochemical antioxidants such as flavonoids, Vitamin B and folate.</p>
+			<h5>Benefits</h5>
+			<p>Potatoes should be included in the diet of those having mouth ulcers. As they are easy to digest, they are good for patients. Consumption of potatoes helps to maintain the blood glucose level and keeps the brain alert and active. People who are diagnosed with kidney stones or heart disorders can include potatoes in their diet as they are light on the stomach.</p>
+			
+			<button class="btn btn-success">Add to cart</button>
+			<button class="btn btn-danger">Buy now</button>
+			
+		</div>
+	</div>
+	<div class="container-fluid sim-products">
+
+		<div class="home-products container-fluid">
+			<h3><span>Products from same category</span></h3>
+			<% @products.each do |product| %>
+				<div class="col-md-2">
+					<div class="product">
+					<div class="img">
+						<%= link_to  "/product/name/#{product.id}" do %>
+						<%= image_tag(product.image_url, :alt => "rss feed") %>
+						<% end %>
+					</div>
+						<h3><%= product.name %></h3>
+						<h4><%= number_to_currency(product.price, :unit => "₹")  %></h4>
+						<h4>Local Brand</h4>
+						<div class="btns">
+							<button class="btn btn-success">Add to cart</button>
+							<button class="btn btn-danger">Buy now</button>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+<!-- Product details end -->
+<div style="clear:both;"></div>
+<%= render :template => 'layouts/footer' %>

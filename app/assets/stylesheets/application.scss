@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+a{text-decoration:none;}
+.web-header.navbar-inverse {
+    background-color: #fff;
+    border-color: #333;
+    border-radius: 0!important;
+    height:70px!important;
+    border-bottom: 1px solid #f5f7f3;
+}
+.web-header.navbar-inverse .navbar-brand {
+    color: #ffffff!important;
+}
+
+.brand-img img{width:22%;}
+.web-header.navbar-inverse .navbar-brand {
+    color: #ffffff !important;
+    font-size: 30px;
+    padding-top: 0px;
+}
+.web-header .nav.navbar-nav li a{
+	
+	color: #888;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.web-header .nav.navbar-nav{
+	float:right;
+}
+.web-header .navbar-header{
+    width:25%
+}
+.web-header .navbar-header p{
+	
+    position: absolute;
+    left: 38px;
+    font-size: 40px;
+    top: 12px;
+    font-weight: bold;
+    color: #131212;
+    font-style: italic;
+    font-family: sans-serif;
+}
+.web-header .nav {display: inline-block;}
+.web-header .nav li{display:inline-block;margin-left: 5px;}
+.web-header .nav li a{color:#333;}
+ .web-header.navbar{margin:0px!important;}
+ .web-header .container-fluid {margin-top:10px;}
+footer {
+    position: absolute;
+    height: 75px;
+    background: #383838;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-top: 2%;
+    margin-top: 15px;
+}
+.srch {
+    display: inline-block;
+    width: 36%;
+    border: 1px solid #ccc;
+    height: 46px;
+    border-radius:5px;
+}
+.srch-div input{
+    width:96%;
+    float:left;
+    height: 40px;
+    border:0px;
+}
+.srch-div i{
+    width:3%;
+    float:left;
+    margin-top:2%;
+    color: #aaa;
+}
+/*Admin styles start*/
+	.sidebar{
+	padding:0!important;
+	margin:0!important;
+	 height: 100%;
+	 background: #403f3f;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-top: 1px solid #505050;
+}
+.col-md-2.sidebar ul li {
+        height: 70px;
+    margin: 0px 5px;
+    padding: 24px 23px;
+    font-size: 20px;
+    border-bottom: 1px solid #7d7979;
+    color: #fff;
+}
+
+.admin-header {
+    background-color: #403f3f!important;
+    border-color: #403f3f!important;
+    border-radius: 0 !important;
+    height: 85px !important;
+}
+.admin-header{
+	margin-bottom: 0px!important;
+}
+
+.admin-header .nav.navbar-nav{
+	float:right;
+}
+.admin-header .nav.navbar-nav li a{
+	font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+.admin-header .container-fluid{
+	margin-top:10px;
+}
+.admin-header a.navbar-brand {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff!important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-height {
+  height: 100%;
+  background: yellow;
+}
+.admin-page {
+    padding: 74px 60px;
+}
+/*Admin styles end*/

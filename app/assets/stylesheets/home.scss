@@ -1,0 +1,96 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.item img{
+	width:100%;
+	height:80%;
+}
+
+ul.cats {
+    padding: 0;
+    margin: 0;
+}
+ul.cats li {
+    display: inline-block;
+    font-size: 20px;
+    width: 16.1%;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+    border-right: 1px solid #fff6f6;
+    text-transform: uppercase;
+}
+ul.cats li a{
+color: #888;
+text-decoration:none;
+}
+ul.cats li:last-child {
+  border-right: 0px solid #f1f1f1;
+}
+.offers .col-md-3 {
+    width: 20%;
+    padding: 5px;
+    margin: 42px;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.offers{
+	    border-top: 1px solid #fff6f6;
+    margin-top: 2px;
+}
+.offers .col-md-3:hover{
+	box-shadow: 7px 7px 7px #ccc;
+	transition: 0.3s;
+}
+
+.offers .col-md-3 img {
+    width: 100%;
+}
+.product .img {
+   width: 180px;
+    /* height: 125px; */
+    text-align: center;
+    margin: auto;
+}
+.product .img img{
+    width: 100%;
+    height: 100%;
+}
+
+.product h3,.product h4 {
+    font-size: 17px;
+   display: inline-block;
+    width: 215px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    font-family: initial;
+    color: #888;
+    line-height: 1.2em;
+    margin: 0px 15px;
+    text-align:center;
+}
+.product {
+    border: 1px solid #f5f5f5;
+    margin: 10px;
+    height: 350px;
+    border-radius: 0px;
+    padding: 15px;
+    box-shadow: 2px 2px 2px #f5f5f5;
+    cursor:pointer;
+    position: relative;
+}
+.product:hover {box-shadow: 0px 0px 13px 12px #e8e8e8;transition: 0.3s;}
+.product .btn {
+    width: 49%;
+   
+    bottom:0;
+}
+.product .btns {
+    position: absolute;
+    bottom: 13px;
+    width: 85%;
+}
