@@ -36,3 +36,43 @@
     font-size: 19px!important;
     width: 128px;
 }
+.admin-page  .addBtn{
+	float:right;
+}
+.admin-page .addBtn .btn {
+    width: 140px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    background: #772d1c;
+    border-color: #772d1c;
+}
+.create-form{
+	width:60%;
+	margin:auto;
+}
+.create-form input{
+	margin-bottom:20px;
+	height:45px;
+}
+.create-form .button {
+    background: #ca4646;
+    border: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 14px;
+}
+.simple_form.new_category{
+	border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 50px;
+}
+.glyphicon{
+	margin:20px;
+}
+.glyphicon-pencil{
+	color:blue;
+	text-decoration:none;
+}

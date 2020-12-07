@@ -1,32 +1,34 @@
 <%= render :template => 'layouts/admin-header' %>
 <%= render :template => 'layouts/admin-sidebar' %>
 <div class="admin-page col-md-10">
-	<h3>Categories</h3>
+	<h3>Products</h3>
 	<div class="addBtn">
 
-		<%= link_to  "/admin/categories/new" do %>
+		<%= link_to  "/admin/products/new" do %>
 			<button class="btn btn-success">Add New</button>
 		<% end %>	
 	</div>
 	<table class="table table-bordered table-hover cats">
 		<thead>
 			<tr>
-				<th>S.No</th><th>Name</th><th>image</th><th>Created at</th><th>Actions</th>
+				<th>S.No</th><th>Name</th><th>Category</th><th>Description</th><th>image</th><th>Created at</th><th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
-				<% @cats.each_with_index do |cat,index| %>
+				<% @products.each_with_index do |pro,index| %>
 					<tr>
 						<td><%= index+1 %></td>
-						<td><%= cat.name %></td>
-						<td class="img"><%= image_tag(cat.image_url) %></td>
-						<td><%= cat.created_at.strftime("%b %d %Y") %></td>
+						<td><%= pro.name %></td>
+						<td><%= pro.category.name %></td>
+						<td><%= pro.description %></td>
+						<td class="img"><%= image_tag(pro.image_url) %></td>
+						<td><%= pro.created_at.strftime("%b %d %Y") %></td>
 						<td>
-							<%= link_to  "/admin/categories/edit/#{cat.id}" do %>
-							<i class="glyphicon glyphicon-pencil" onClick="deleteCat(<%= cat.id %>)"></i>
+							<%= link_to  "/admin/categories/edit/#{pro.id}" do %>
+							<i class="glyphicon glyphicon-pencil" onClick="deleteCat(<%= pro.id %>)"></i>
 							<% end %>
 							| 
-							<i class="glyphicon glyphicon-trash" onClick="deleteCat(<%= cat.id %>)"></i>
+							<i class="glyphicon glyphicon-trash" onClick="deleteCat(<%= pro.id %>)"></i>
 						</td>
 					</tr>
 					

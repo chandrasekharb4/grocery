@@ -4,4 +4,9 @@ class ProductController < ApplicationController
   		cat = @product.category;
   		@products = Product.where(Category:cat)
   end
+
+  def productsAdmin
+  	@products = Product.joins(:category)
+  end
+
 end
