@@ -1,0 +1,10 @@
+<%= simple_form_for @product do |f| %>
+	<%= f.input :name, lable:"Product name", input_html: { class: 'form-control' } %>
+	<%= f.input :category_id,:collection => @categories,:label_method => :name,:value_method => :id,:label => "Category" ,:include_blank => true,input_html: { class: 'form-control' } %>
+	<%= f.input :description, lable:"Description", input_html: { class: 'form-control' } %>
+	<%= f.input :price, lable:"Price", input_html: { class: 'form-control' } %>
+	<%= f.input :offer_price, lable:"Offer price", input_html: { class: 'form-control' } %>
+	<%= f.input :image_url, lable:"Image url", input_html:{ class: 'form-control' } %>
+	<%= f.button :submit,  id: 'submit-button', input_html: { class: 'btn' }%>
+
+<% end %>

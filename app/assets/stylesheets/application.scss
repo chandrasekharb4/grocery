@@ -79,7 +79,7 @@ footer {
     border-radius:5px;
 }
 .srch-div input{
-    width:96%;
+    width:89%;
     float:left;
     height: 40px;
     border:0px;
@@ -90,6 +90,64 @@ footer {
     margin-top:2%;
     color: #aaa;
 }
+.product .btn-success, .details .btn-success {
+    background: #7790ca;
+    border-color: #7790ca;
+    border-radius: 0px;
+}
+.product .btn-danger,.details .btn-danger {
+    color: #fff;
+    background-color: #4a6551;
+    border-color: #4a6551;
+    border-radius: 0px;
+}
+.cat-desc{
+    font-size: 25px;
+    color: #deabab;
+    font-family: monospace;
+    font-style: italic;
+    padding: 17px;
+    text-align: center;
+}
+ span.cat-desc{
+    padding: 10px 38px;
+    color:green;
+    font-weight:bold;
+    color: green;
+ }
+ #new_user{
+
+ padding: 50px;
+    width: 41%;
+    margin: 10% auto 11.41% auto;
+    height:430px;
+ }
+ .auth-links a {
+    display: inline-block;
+    margin-left: 20px;
+}
+.auth-links {
+    font-size: 17px;
+    display: inline-flex;
+    float:right;
+    margin-top: 30px;
+}
+button.btn.btn-load {
+    width: 150px;
+    background: red;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 45%;
+    border: 0;
+    border-radius: 0;
+    height: 46px;
+}
+.new_user .input{margin:0px 15px 30px 5px;}
+.new_user input{width:90%;height:45px;}
+.new_user .btn{width:40%;background:red;color:#fff;margin:0 25%;}
+#user_remember_me{width:20px;height:25px;margin-top: -3px;}
+.user_remember_me{margin-left:25px!important;}
 /*Admin styles start*/
 	.sidebar{
 	padding:0!important;
@@ -111,6 +169,16 @@ footer {
     font-size: 20px;
     border-bottom: 1px solid #7d7979;
     color: #fff;
+}
+.col-md-2.sidebar ul li a{
+    color:#fff;
+    text-decoration:none;
+}
+.col-md-2.sidebar ul li a:hover{
+    color:red;
+}
+.col-md-2.sidebar ul li a:active{
+    color:red;
 }
 
 .admin-header {

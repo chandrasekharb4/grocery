@@ -20,11 +20,11 @@
 						<td><%= index+1 %></td>
 						<td><%= pro.name %></td>
 						<td><%= pro.category.name %></td>
-						<td><%= pro.description %></td>
+						<td><%= pro.description.slice(0, 50) %></td>
 						<td class="img"><%= image_tag(pro.image_url) %></td>
 						<td><%= pro.created_at.strftime("%b %d %Y") %></td>
 						<td>
-							<%= link_to  "/admin/categories/edit/#{pro.id}" do %>
+							<%= link_to  "/admin/products/edit/#{pro.id}" do %>
 							<i class="glyphicon glyphicon-pencil" onClick="deleteCat(<%= pro.id %>)"></i>
 							<% end %>
 							| 
@@ -35,6 +35,17 @@
 				<% end %>
 		</tbody>
 	</table>
+	<ul class="pagination left">
+		<% if @page >= 1 %>
+		<li><%= link_to admin_products_path(page: @page - 1) do %> << Prev  <% end %></li>
+		<% end %>
+	</ul>
+	<ul class="pagination right">
+		<% if @page <= @end %>
+		<li><%= link_to admin_products_path(page: @page + 1) do %> Next >> <% end %></li>
+		<% end %>
+	</ul>
+	
 	
 </div>
 <!-- Delete modal -->
@@ -72,7 +83,7 @@
 	{
 		var id = $("#delId").val()
 		$.ajax({
-				url :"/admin/categories/delete/"+id,
+				url :"/admin/products/delete/"+id,
 				type : "GET",
 				success : function(data)
 				{

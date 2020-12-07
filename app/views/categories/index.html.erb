@@ -7,7 +7,9 @@
 	</div>
 	<!-- Product on category page -->
 		<div class="home-products col-md-3">
-			
+			<br>
+<span class="cat-desc"><%= @cat.name %></span>
+			<p class="cat-desc"> "<%= @cat.description %>"</p>
 		</div>
 		<div class="home-products col-md-9">
 			<% @products.each do |product| %>

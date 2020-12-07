@@ -74,7 +74,15 @@
 					</div>
 				</div>
 			<% end %>
+
+
+
 		</div>
+		<!-- Load more button -->
+<input type="hidden" id="load_more" value="2" />
+<input type="hidden" id="loadval" value="<%= @end %>" />
+	<button class="btn btn-load" onclick="loadMore()" id="loadMore">More </button>
+<!-- Load more button end -->
 		<!-- Product on home page -->
 	</div>
 	<!-- Offers block end -->
@@ -83,3 +91,33 @@
 
 <div style="clear:both;"></div>
 <%= render :template => 'layouts/footer' %>
+<script type="text/javascript">
+	
+		//Delete category
+	function loadMore()
+	{
+		var page = 1*($("#load_more").val());
+		var end = 1*($("#loadval").val());
+		var npage=page+1;
+		if(page>end){
+			$("#loadMore").hide();
+		}
+		console.log(page)
+		$("#load_more").val(npage);
+		$.ajax({
+				url :"/more",
+				type : "GET",
+				data:{page:page},
+				dataType: "json",
+				success : function(data)
+				{
+					var pros = data;
+					var pro='';
+					for(i=0;i<pros.length;i++){
+						pro+='<div class="col-md-2"><div class="product"><div class="img"><a><img src="'+pros[i].image_url+'"></a></div><h3>'+pros[i].name+'</h3><h4>'+pros[i].price+'</h4><h4>Local Brand</h4><h3>'+pros[i].name+'</h3><div class="btns"><button class="btn btn-success">Add to cart</button><button class="btn btn-danger">Buy now</button></div></div></div>'
+					}
+					$('.home-products').append(pro)
+				}
+				})
+	}
+</script>

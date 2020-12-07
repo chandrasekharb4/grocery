@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   	@cat = Category.find_by_id([params[:id]])
   	@products = [];
   	#@products = Product.where(Category:[params[:id]])
-  	@products = Product.joins(:category).where(['categories.id = ?' , 2])
+  	@products = Product.joins(:category).where(['categories.id = ?' , @cat])
 
   end
 
@@ -49,7 +49,7 @@ end
   end
   private
 		def cat_params
-			params.require(:category).permit(:name,:image_url)
+			params.require(:category).permit(:image_url,:name,:description)
 		end
 
 end

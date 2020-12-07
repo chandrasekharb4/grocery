@@ -19,7 +19,13 @@
 	font-size: 22px;
 }
 .admin-page .cats .img{
-	width:15%;
+	width:8%;
+}
+.right{
+    float:right;
+}
+.left{
+    float:left;
 }
 .admin-page .cats .img img{
 	width:100%;
@@ -52,7 +58,7 @@
 	width:60%;
 	margin:auto;
 }
-.create-form input{
+.create-form input, .create-form select{
 	margin-bottom:20px;
 	height:45px;
 }
@@ -64,15 +70,15 @@
     font-weight: bold;
     padding: 14px;
 }
-.simple_form.new_category{
+.simple_form{
 	border: 1px solid #ccc;
     border-radius: 15px;
     padding: 50px;
 }
-.glyphicon{
+.admin-page .glyphicon{
 	margin:20px;
 }
-.glyphicon-pencil{
+.admin-page .glyphicon-pencil{
 	color:blue;
 	text-decoration:none;
 }

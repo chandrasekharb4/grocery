@@ -10,9 +10,15 @@
           </div>
         </div>
         <ul class="nav navbar-nav">
+          <% if !user_signed_in? %>
+          <li><%= link_to new_user_session_path do %>Login <i class="glyphicon glyphicon-lock"></i><% end %></li>
+           <li><%= link_to new_user_registration_path do %>Signup <i class="glyphicon glyphicon-user"></i><% end %></li>
+         <% else %>
+           <li><a><%= current_user.email %></a></li>
+           <li><%= link_to destroy_user_session_path, method: :delete  do %>Logout <i class="glyphicon glyphicon-lock"></i><% end %></li>
+
+         <% end %>
          
-          <li><a href="#">Login <i class="glyphicon glyphicon-lock"></i></a></li>
-          <li><a href="#">Signup <i class="glyphicon glyphicon-user"></i></a></li>
         </ul>
       </div>
     </nav>
